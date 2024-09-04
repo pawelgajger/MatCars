@@ -102,11 +102,12 @@ body::before {
 
 /* Prosta sekcja tekstowa */
 .about-section {
-	background-color: rgba(0, 0, 0, 0.7); /* Półprzezroczyste tło sekcji, dla lepszej czytelności */
-	padding: 50px 20px;
+	background-color: rgba(0, 0, 0, 0.7); /* Półprzezroczyste tło sekcji */
+	padding: 30px 20px; /* Zmniejszenie paddingu wewnątrz sekcji */
 	text-align: center;
 	color: #ffffff;
 	animation: fadeIn 2s ease-in-out; /* Prosta animacja fade-in */
+	margin-bottom: 20px; /* Zmniejszenie odstępu poniżej sekcji */
 }
 
 /* Efekty animacji fade-in */
@@ -238,7 +239,7 @@ form button:hover {
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
-	margin-top: 30px;
+	margin-top: 20px;
 }
 
 .project-card {
@@ -247,7 +248,7 @@ form button:hover {
 	border-radius: 10px;
 	overflow: hidden;
 	width: 300px;
-	margin: 20px;
+	margin: 15px;
 	text-align: center;
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -265,6 +266,11 @@ form button:hover {
 .project-card p {
 	padding: 0 15px 20px;
 	font-size: 1rem;
+}
+
+p {
+	margin-bottom: 10px; /* Zmniejszenie odstępu między akapitami */
+	line-height: 1.6; /* Możesz też zmniejszyć wysokość linii, aby tekst był bardziej zwarty */
 }
 
 /* Efekty hover dla kart projektów */
@@ -315,4 +321,15 @@ form button:hover {
 .facebook-page:hover {
 	background-color: #2d4373;
 	transform: scale(1.05); /* Powiększenie przycisku przy najechaniu */
+}
+
+.visit-counter {
+	text-align: center;
+	font-size: 16px;
+	color: #ffffff;
+	margin-top: 20px;
+}
+
+.visit-counter img {
+	margin-top: 10px;
 }
