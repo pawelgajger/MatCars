@@ -5,43 +5,32 @@ body {
 	margin: 0;
 	font-family: 'Montserrat', sans-serif; /* Czcionka Montserrat */
 	color: #ffffff;
-	background-image: url('bmw-xm-mi-04.jpg'); /* Obraz tła na całą stronę */
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-attachment: fixed; /* Opcjonalnie: Tło pozostaje stałe podczas przewijania */
-	background-color: #000000; /* Fallback dla tła */
+	background-color: #ffffff; /* Fallback dla tła */
 	display: flex;
 	flex-direction: column;
 }
 
-/* Opcjonalna nakładka na tło */
-body::before {
-	content: '';
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, 0.5); /* Półprzezroczysta nakładka na obraz */
-	z-index: -1; /* Umieszczenie nakładki za całą zawartością */
+.navbar {
+	display: flex; /* Flexbox do ustawienia elementów */
+	justify-content: space-between; /* Elementy rozmieszczone na lewo, środek i prawo */
+	align-items: center; /* Wyrównanie w pionie */
+	padding: 1rem;
+	background-color: #f8f8f8; /* Tło nawigacji */
 }
 
-/* Pasek nawigacyjny */
-.navbar {
-	background-color: rgba(0, 102, 178, 0.8); /* Niebieski pasek nawigacyjny */
-	padding: 1rem;
-	text-align: center;
+.navbar .logo-left img,
+.navbar .logo-right img {
+	height: 50px; /* Wysokość loga */
 }
 
 .navbar ul {
 	list-style-type: none;
+	display: flex; /* Ustawienie linków w poziomie */
 	margin: 0;
 	padding: 0;
 }
 
 .navbar ul li {
-	display: inline;
 	margin: 0 10px;
 }
 
@@ -59,24 +48,22 @@ body::before {
 }
 
 .navbar ul li a:hover {
-	background-color: #004080; /* Zmiana koloru przycisku przy najechaniu */
+	background-color: #ff0000; /* Zmiana koloru przycisku przy najechaniu */
 	transform: scale(1.05); /* Powiększenie przycisku przy najechaniu */
 	border: 2px solid #ffcc00; /* Pojawienie się obramowania przy hover */
 }
 
-/* Sekcja z obrazem w tle */
-.hero-background {
-	background-image: url('bmw-xm-mi-06.jpg'); /* Obraz tła sekcji */
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	height: 500px;
-	width: 100%;
+.navbar .logo-left {
+	margin-right: 20px;
+}
+
+.navbar .logo-right {
+	display: flex; /* Aby loga były w jednej linii */
+	gap: 10px; /* Odstęp między logami */
 }
 
 /* Sekcja Gdzie jesteśmy */
 .location-section {
-	background-color: rgba(0, 0, 0, 0.7); /* Opcjonalne półprzezroczyste tło */
 	padding: 50px 20px;
 	text-align: center;
 	color: #ffffff; /* Kolor tekstu */
@@ -102,29 +89,72 @@ body::before {
 
 /* Prosta sekcja tekstowa */
 .about-section {
-	background-color: rgba(0, 0, 0, 0.7); /* Półprzezroczyste tło sekcji */
 	padding: 30px 20px; /* Zmniejszenie paddingu wewnątrz sekcji */
 	text-align: center;
-	color: #ffffff;
+	color: #000;
 	animation: fadeIn 2s ease-in-out; /* Prosta animacja fade-in */
 	margin-bottom: 20px; /* Zmniejszenie odstępu poniżej sekcji */
 }
 
-/* Efekty animacji fade-in */
-@keyframes fadeIn {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
+.container {
+	width: 100%;
+	margin: 0 auto; /* Wyśrodkowanie na stronie */
+	padding: 0 20px; /* Opcjonalny padding wewnątrz kontenera */
+}
+
+.main-section {
+	display: flex;
+	align-items: center; /* Wyrównanie elementów w pionie */
+	justify-content: center; /* Wyśrodkowanie w poziomie */
+	height: 500px; /* Wysokość sekcji */
+	background-color: #000; /* Kolor tła */
+	border-radius: 10px; /* Zaokrąglenie rogów */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtelny cień */
+	margin-bottom: 20px; /* Dystans od innych elementów */
+	background-image: url('photos/background2.jpg');
+	background-size: contain; /* Dopasowanie tła do kontenera */
+	background-position: center; /* Wyśrodkowanie tła */
+	background-repeat: no-repeat; /* Zapobieganie powtarzaniu tła */
+    animation: fadeInSlide 3s ease-in-out forwards; /* Animacja wejścia */
+}
+
+.main-section .content {
+	text-align: center; /* Wyśrodkowanie tekstu i obrazu */
+}
+
+.main-section img {
+    max-width: 50%; /* Logo zajmuje 50% szerokości */
+    height: auto; /* Zachowuje proporcje */
+    margin-bottom: 5rem; /* Odstęp między logo a tekstem */
+    opacity: 0; /* Początkowo niewidoczny */
+    transform: translateX(-100px); /* Startowe przesunięcie w lewo */
+	animation: fadeInSlide 3s ease-in-out 2s forwards}
+
+.main-section p {
+	margin-top: 20px; /* Odstęp nad tekstem */
+	font-size: 1.5rem; /* Rozmiar tekstu */
+	color: #ffffff; /* Kolor tekstu */
+	opacity: 0; /* Tekst początkowo niewidoczny */
+	animation: fadeInSlide 3s ease-in-out 2s forwards
+}
+
+/* Animacja fade-in dla tekstu */
+@keyframes fadeInSlide {
+    from {
+        opacity: 0; /* Start: niewidoczny */
+        transform: translateX(-100px); /* Startowe przesunięcie w lewo */
+    }
+    to {
+        opacity: 1; /* Koniec: widoczny */
+        transform: translateX(0); /* Na miejscu */
+    }
 }
 
 /* Styl dla tekstu z półprzezroczystym tłem */
 .text-background {
-	background-color: rgba(0, 0, 0, 0.5); /* Półprzezroczyste tło dla tekstu */
 	padding: 10px;
 	border-radius: 5px;
+	font-size: 20px;
 	display: inline-block;
 	line-height: 2; /* Większy odstęp między liniami */
 	margin-bottom: 10px; /* Dodanie przerwy między akapitami */
@@ -160,13 +190,12 @@ button:hover {
 	border: none;
 }
 
-/* Stopka */
 footer {
-	background-color: #000000;
+	background-color: #ffffff; /* Jasne tło dla stopki */
+	color: #000000; /* Czarny kolor tekstu dla kontrastu */
 	text-align: center;
 	padding: 10px;
-	color: #ffffff;
-	margin-top: auto; /* Umieszcza stopkę na dole */
+	margin-top: auto;
 }
 
 /* Responsywność dla mniejszych ekranów */
@@ -179,10 +208,6 @@ footer {
 	.about-section {
 		padding: 20px;
 		font-size: 14px;
-	}
-
-	.hero-background {
-		height: 300px; /* Mniejsze tło dla urządzeń mobilnych */
 	}
 
 	.navbar ul li a {
@@ -279,48 +304,57 @@ p {
 	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Sekcja z linkami społecznościowymi */
 .social-section {
 	text-align: center;
 	margin: 50px 0;
-	color: #fff;
+	padding: 20px;
+	background-color: #f8f9fa; /* Jasnoszare tło */
+	border-radius: 10px; /* Zaokrąglenie rogów */
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtelny cień */
+	color: #000; /* Czarny kolor tekstu */
+}
+
+.social-section h3 {
+	margin-bottom: 20px;
+	font-size: 24px;
+	color: #000; /* Czarny kolor tekstu */
 }
 
 .social-links {
 	display: flex;
 	justify-content: center;
 	gap: 20px; /* Odstęp między przyciskami */
+	flex-wrap: wrap; /* Dostosowanie do mniejszych ekranów */
 }
 
-.button {
+.social-links .button {
 	display: inline-block;
-	padding: 10px 20px;
+	padding: 12px 24px;
 	text-decoration: none;
+	font-size: 16px;
 	font-weight: 500;
+	color: white;
 	border-radius: 5px;
 	transition: background-color 0.3s ease, transform 0.3s ease;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Cień przycisku */
 }
 
-/* Styl dla przycisku Google Opinie */
-.google-review {
+.social-links .button.google-review {
 	background-color: #4285f4; /* Kolor Google */
-	color: #fff;
 }
 
-.google-review:hover {
-	background-color: #357ae8;
-	transform: scale(1.05); /* Powiększenie przycisku przy najechaniu */
+.social-links .button.google-review:hover {
+	background-color: #357ae8; /* Ciemniejszy odcień przy najechaniu */
+	transform: scale(1.05); /* Powiększenie przycisku */
 }
 
-/* Styl dla przycisku Facebook */
-.facebook-page {
+.social-links .button.facebook-page {
 	background-color: #3b5998; /* Kolor Facebook */
-	color: #fff;
 }
 
-.facebook-page:hover {
-	background-color: #2d4373;
-	transform: scale(1.05); /* Powiększenie przycisku przy najechaniu */
+.social-links .button.facebook-page:hover {
+	background-color: #2d4373; /* Ciemniejszy odcień przy najechaniu */
+	transform: scale(1.05); /* Powiększenie przycisku */
 }
 
 .visit-counter {
@@ -332,4 +366,23 @@ p {
 
 .visit-counter img {
 	margin-top: 10px;
+}
+
+a {
+	cursor: pointer; /* Zmienia kursor na "pointer", gdy najedziesz na link */
+}
+
+button {
+	cursor: pointer; /* Zmienia kursor na "pointer", gdy najedziesz na przycisk */
+}
+
+div {
+	cursor: pointer; /* Zmienia kursor na "pointer" dla elementów <div> */
+}
+
+.text-background i {
+	color: #0066b2; /* Kolor ikon */
+	margin-right: 10px;
+	font-size: 1.5rem;
+	vertical-align: middle;
 }
