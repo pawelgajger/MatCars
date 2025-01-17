@@ -4,7 +4,7 @@ body {
 	height: 100%; /* Ustawienie pełnej wysokości strony */
 	margin: 0;
 	font-family: 'Montserrat', sans-serif; /* Czcionka Montserrat */
-	color: #ffffff;
+	color: #000;
 	background-color: #ffffff; /* Fallback dla tła */
 	display: flex;
 	flex-direction: column;
@@ -35,39 +35,38 @@ body {
 }
 
 .navbar ul li a {
-    display: inline-block;
-    background-color: #0066b2; /* Niebieski kolor przycisku */
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-weight: 500;
-    border-radius: 5px; /* Zaokrąglone rogi */
-    transition: all 0.3s ease; /* Płynne przejście efektów */
-    position: relative; /* Ustawienie dla pseudo-elementu */
+	display: inline-block;
+	background-color: #0066b2; /* Niebieski kolor przycisku */
+	color: white;
+	padding: 10px 20px;
+	text-decoration: none;
+	font-weight: 500;
+	border-radius: 5px; /* Zaokrąglone rogi */
+	transition: all 0.3s ease; /* Płynne przejście efektów */
+	position: relative; /* Ustawienie dla pseudo-elementu */
 }
 
 .navbar ul li a::after {
-    content: ''; /* Pseudo-element */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 5px;
-    background-color: rgba(255, 0, 0, 0.3); /* Czerwone podświetlenie z przezroczystością */
-    opacity: 0; /* Ukrycie podświetlenia */
-    transition: opacity 0.3s ease; /* Płynne pojawianie się */
-    z-index: -1; /* Umieszczenie podświetlenia za przyciskiem */
+	content: ''; /* Pseudo-element */
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+	background-color: rgba(255, 0, 0, 0.8); /* Czerwone podświetlenie z przezroczystością */
+	opacity: 0;
+	transition: opacity 0.3s ease; /* Płynne pojawianie się */
+	z-index: -1; /* Umieszczenie podświetlenia za przyciskiem */
 }
 
 .navbar ul li a:hover::after {
-    opacity: 1; /* Wyświetlenie podświetlenia */
+	opacity: 1; /* Wyświetlenie podświetlenia */
 }
 
 .navbar ul li a:hover {
-    transform: scale(1.05); /* Powiększenie przycisku */
+	transform: scale(1.05); /* Powiększenie przycisku */
 }
-
 
 .navbar .logo-left {
 	margin-right: 20px;
@@ -82,7 +81,7 @@ body {
 .location-section {
 	padding: 50px 20px;
 	text-align: center;
-	color: #ffffff; /* Kolor tekstu */
+	color: #000; /* Kolor tekstu */
 	display: flex;
 	flex-direction: column;
 	align-items: center; /* Wyśrodkowanie w poziomie */
@@ -113,61 +112,60 @@ body {
 }
 
 .container {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
 }
 
 .main-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 800px; /* Wysokość kontenera */
-    width: 100%; /* Pełna szerokość */
-    background-image: url('photos/photo_main_page.png'); /* Ścieżka do obrazu */
-    background-size: cover; /* Obraz wypełnia kontener */
-    background-position: center; /* Wyśrodkowanie obrazu */
-    background-repeat: no-repeat; /* Zapobiegaj powtarzaniu obrazu */
-    animation: fadeInSlide 3s ease-in-out forwards; /* Efekt fade-in */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 1000px; /* Wysokość kontenera */
+	width: 100%; /* Pełna szerokość */
+	background-image: url('photos/photo_main_page.png'); /* Ścieżka do obrazu */
+	background-size: cover; /* Obraz wypełnia kontener */
+	background-position: center; /* Wyśrodkowanie obrazu */
+	background-repeat: no-repeat; /* Zapobiegaj powtarzaniu obrazu */
+	animation: fadeInSlide 3s ease-in-out forwards; /* Efekt fade-in */
 }
 
 .main-section p {
-    font-size: 2rem; /* Większy rozmiar czcionki */
-    font-weight: bold; /* Opcjonalnie pogrubienie tekstu */
-    margin-top: 20px; /* Odstęp od logo */
-    color: #000; /* Kolor tekstu */
-    opacity: 0; /* Tekst początkowo niewidoczny */
-    animation: fadeInSlide 3s ease-in-out 1.5s forwards; /* Efekt fade-in */
+	font-size: 2rem; /* Większy rozmiar czcionki */
+	font-weight: bold; /* Opcjonalnie pogrubienie tekstu */
+	margin-top: 20px; /* Odstęp od logo */
+	color: #000; /* Kolor tekstu */
+	opacity: 0; /* Tekst początkowo niewidoczny */
+	animation: fadeInSlide 3s ease-in-out 1.5s forwards; /* Efekt fade-in */
 }
 
 .logo {
-    width: auto; /* Pozwala na dynamiczne dopasowanie szerokości */
-    max-width: 600px; /* Zwiększ maksymalną szerokość logo */
-    height: auto; /* Zachowuje proporcje */
-    margin-bottom: 30px; /* Większy odstęp między logo a tekstem */
-    animation: fadeInSlide 3s ease-in-out 1s forwards; /* Efekt fade-in */
-    opacity: 0; /* Startowo niewidoczne */
+	width: auto; /* Pozwala na dynamiczne dopasowanie szerokości */
+	max-width: 600px; /* Zwiększ maksymalną szerokość logo */
+	height: auto; /* Zachowuje proporcje */
+	margin-bottom: 30px; /* Większy odstęp między logo a tekstem */
+	animation: fadeInSlide 3s ease-in-out 1s forwards; /* Efekt fade-in */
+	opacity: 0; /* Startowo niewidoczne */
 }
 
 .content {
-    position: relative; /* Umożliwia precyzyjne pozycjonowanie elementów wewnątrz */
-    text-align: center; /* Wyśrodkowanie tekstu i logo */
-    z-index: 10; /* Aby treść była widoczna nad tłem */
-    color: #ffffff; /* Kolor tekstu */
+	position: relative; /* Umożliwia precyzyjne pozycjonowanie elementów wewnątrz */
+	text-align: center; /* Wyśrodkowanie tekstu i logo */
+	z-index: 10; /* Aby treść była widoczna nad tłem */
+	color: #ffffff; /* Kolor tekstu */
 	text-align: center; /* Wyśrodkowanie zawartości */
-    z-index: 10; /* Nad tłem */
+	z-index: 10; /* Nad tłem */
 }
 
-
 @keyframes fadeInSlide {
-    from {
-        opacity: 0;
-        transform: translateX(-100px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+	from {
+		opacity: 0;
+		transform: translateX(-100px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
 }
 
 /* Styl dla tekstu z półprzezroczystym tłem */
@@ -233,50 +231,6 @@ footer {
 	.navbar ul li a {
 		font-size: 16px;
 	}
-}
-
-/* Styl dla formularza kontaktowego */
-form {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	margin-top: 20px;
-}
-
-form label {
-	margin-bottom: 5px;
-	color: #ffffff; /* Biały kolor tekstu */
-}
-
-form input,
-form textarea {
-	width: 100%; /* Ustaw szerokość pola */
-	max-width: 500px; /* Maksymalna szerokość pól */
-	padding: 10px;
-	margin-bottom: 15px; /* Odstępy między polami */
-	border: 1px solid #ccc;
-	border-radius: 5px;
-	font-size: 16px;
-}
-
-form textarea {
-	height: 150px; /* Ustawienie wysokości pola wiadomości */
-	resize: none; /* Zapobiega zmianie rozmiaru przez użytkownika */
-}
-
-form button {
-	background-color: #0066b2;
-	color: white;
-	padding: 10px 20px;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
-	transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-form button:hover {
-	background-color: #004080;
-	transform: scale(1.05);
 }
 
 /* Karty projektów w sekcji realizacji */
@@ -349,9 +303,9 @@ p {
 
 .social-links .button {
 	display: inline-block;
-	padding: 12px 24px;
+	padding: 10px 20px;
 	text-decoration: none;
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: 500;
 	color: white;
 	border-radius: 5px;
@@ -405,4 +359,110 @@ div {
 	margin-right: 10px;
 	font-size: 1.5rem;
 	vertical-align: middle;
+}
+
+#contact {
+	padding: 40px 20px;
+	text-align: center;
+	color: #000; /* Kolor tekstu */
+	background-color: #f9f9f9; /* Jasne tło dla kontrastu */
+	border: 2px solid #0066b2; /* Niebieska ramka */
+	border-radius: 10px; /* Zaokrąglone rogi */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtelny cień */
+	animation: fadeInScale 1s ease-in-out; /* Efekt animacji */
+}
+
+#contact h3 {
+	font-size: 28px;
+	font-weight: bold;
+	margin-bottom: 20px;
+	color: #0066b2; /* Niebieski kolor nagłówka */
+}
+
+#contact p,
+#contact .contact-info p {
+	font-size: 18px; /* Większy rozmiar tekstu */
+	margin-bottom: 15px;
+	line-height: 1.8; /* Zwiększona wysokość linii */
+}
+
+#contact .contact-description {
+	font-size: 20px; /* Tekst opisu większy od reszty */
+	font-weight: 500;
+	margin-bottom: 25px;
+}
+
+#contact .contact-info ul {
+	list-style-type: none;
+	padding: 0;
+	margin-top: 15px;
+}
+
+#contact .contact-info ul li {
+	font-size: 18px; /* Dopasowanie rozmiaru tekstu */
+	margin: 5px 0;
+}
+
+#contact .text-link {
+	color: #0066b2;
+	text-decoration: none;
+	font-weight: bold;
+	transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#contact .text-link:hover {
+	color: #004080;
+	transform: scale(1.1); /* Powiększenie linku przy najechaniu */
+}
+
+/* Efekt animacji fade-in z lekkim powiększeniem */
+@keyframes fadeInScale {
+	from {
+		opacity: 0;
+		transform: scale(0.9);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+.hamburger-menu {
+	display: none;
+	font-size: 24px;
+	background: none;
+	border: none;
+	color: #0066b2;
+	cursor: pointer;
+	position: absolute;
+	right: 20px;
+	top: 15px;
+	z-index: 1000;
+}
+
+@media (max-width: 768px) {
+	.hamburger-menu {
+		display: block;
+	}
+
+	.nav-links {
+		display: none; /* Ukryj menu */
+		flex-direction: column; /* Ustaw układ pionowy */
+		gap: 10px;
+		position: absolute;
+		top: 60px;
+		left: 0;
+		width: 100%;
+		background-color: #f8f8f8; /* Tło menu */
+		padding: 10px 0;
+	}
+
+	.nav-links.active {
+		display: flex; /* Pokaż menu po kliknięciu */
+	}
+
+	.social-links .button {
+		padding: 8px 16px;
+		font-size: 12px;
+	}
 }

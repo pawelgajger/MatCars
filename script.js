@@ -1,7 +1,6 @@
-const aboutLink = document.querySelector('nav ul li a[href="index.html"]')
+const hamburger = document.querySelector('.hamburger-menu')
+const navLinks = document.querySelector('.nav-links')
 
-aboutLink.addEventListener('click', function (event) {
-	event.preventDefault() 
-	console.log('Kliknięto w link "O nas"')
-	// Tutaj możesz dodać dowolną logikę, którą chcesz, np. przenieść użytkownika do sekcji "O nas"
+hamburger.addEventListener('click', () => {
+	navLinks.classList.toggle('active')
 })
