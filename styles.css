@@ -34,24 +34,40 @@ body {
 	margin: 0 10px;
 }
 
-/* Stylizowanie linków na przyciski */
 .navbar ul li a {
-	display: inline-block;
-	background-color: #0066b2; /* Niebieski kolor przycisku */
-	color: white;
-	padding: 10px 20px;
-	text-decoration: none;
-	font-weight: 500;
-	border-radius: 5px; /* Zaokrąglone rogi, aby przypominało przyciski */
-	transition: background-color 0.3s ease, transform 0.3s ease;
-	border: 2px solid transparent; /* Dodajemy pusty border */
+    display: inline-block;
+    background-color: #0066b2; /* Niebieski kolor przycisku */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 5px; /* Zaokrąglone rogi */
+    transition: all 0.3s ease; /* Płynne przejście efektów */
+    position: relative; /* Ustawienie dla pseudo-elementu */
+}
+
+.navbar ul li a::after {
+    content: ''; /* Pseudo-element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: rgba(255, 0, 0, 0.3); /* Czerwone podświetlenie z przezroczystością */
+    opacity: 0; /* Ukrycie podświetlenia */
+    transition: opacity 0.3s ease; /* Płynne pojawianie się */
+    z-index: -1; /* Umieszczenie podświetlenia za przyciskiem */
+}
+
+.navbar ul li a:hover::after {
+    opacity: 1; /* Wyświetlenie podświetlenia */
 }
 
 .navbar ul li a:hover {
-	background-color: #ff0000; /* Zmiana koloru przycisku przy najechaniu */
-	transform: scale(1.05); /* Powiększenie przycisku przy najechaniu */
-	border: 2px solid #ffcc00; /* Pojawienie się obramowania przy hover */
+    transform: scale(1.05); /* Powiększenie przycisku */
 }
+
 
 .navbar .logo-left {
 	margin-right: 20px;
@@ -97,56 +113,60 @@ body {
 }
 
 .container {
-	width: 100%;
-	margin: 0 auto; /* Wyśrodkowanie na stronie */
-	padding: 0 20px; /* Opcjonalny padding wewnątrz kontenera */
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
 }
 
 .main-section {
-	display: flex;
-	align-items: center; /* Wyrównanie elementów w pionie */
-	justify-content: center; /* Wyśrodkowanie w poziomie */
-	height: 500px; /* Wysokość sekcji */
-	background-color: #000; /* Kolor tła */
-	border-radius: 10px; /* Zaokrąglenie rogów */
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtelny cień */
-	margin-bottom: 20px; /* Dystans od innych elementów */
-	background-image: url('photos/background2.jpg');
-	background-size: contain; /* Dopasowanie tła do kontenera */
-	background-position: center; /* Wyśrodkowanie tła */
-	background-repeat: no-repeat; /* Zapobieganie powtarzaniu tła */
-    animation: fadeInSlide 3s ease-in-out forwards; /* Animacja wejścia */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 800px; /* Wysokość kontenera */
+    width: 100%; /* Pełna szerokość */
+    background-image: url('photos/photo_main_page.png'); /* Ścieżka do obrazu */
+    background-size: cover; /* Obraz wypełnia kontener */
+    background-position: center; /* Wyśrodkowanie obrazu */
+    background-repeat: no-repeat; /* Zapobiegaj powtarzaniu obrazu */
+    animation: fadeInSlide 3s ease-in-out forwards; /* Efekt fade-in */
 }
-
-.main-section .content {
-	text-align: center; /* Wyśrodkowanie tekstu i obrazu */
-}
-
-.main-section img {
-    max-width: 50%; /* Logo zajmuje 50% szerokości */
-    height: auto; /* Zachowuje proporcje */
-    margin-bottom: 5rem; /* Odstęp między logo a tekstem */
-    opacity: 0; /* Początkowo niewidoczny */
-    transform: translateX(-100px); /* Startowe przesunięcie w lewo */
-	animation: fadeInSlide 3s ease-in-out 2s forwards}
 
 .main-section p {
-	margin-top: 20px; /* Odstęp nad tekstem */
-	font-size: 1.5rem; /* Rozmiar tekstu */
-	color: #ffffff; /* Kolor tekstu */
-	opacity: 0; /* Tekst początkowo niewidoczny */
-	animation: fadeInSlide 3s ease-in-out 2s forwards
+    font-size: 2rem; /* Większy rozmiar czcionki */
+    font-weight: bold; /* Opcjonalnie pogrubienie tekstu */
+    margin-top: 20px; /* Odstęp od logo */
+    color: #000; /* Kolor tekstu */
+    opacity: 0; /* Tekst początkowo niewidoczny */
+    animation: fadeInSlide 3s ease-in-out 1.5s forwards; /* Efekt fade-in */
 }
 
-/* Animacja fade-in dla tekstu */
+.logo {
+    width: auto; /* Pozwala na dynamiczne dopasowanie szerokości */
+    max-width: 600px; /* Zwiększ maksymalną szerokość logo */
+    height: auto; /* Zachowuje proporcje */
+    margin-bottom: 30px; /* Większy odstęp między logo a tekstem */
+    animation: fadeInSlide 3s ease-in-out 1s forwards; /* Efekt fade-in */
+    opacity: 0; /* Startowo niewidoczne */
+}
+
+.content {
+    position: relative; /* Umożliwia precyzyjne pozycjonowanie elementów wewnątrz */
+    text-align: center; /* Wyśrodkowanie tekstu i logo */
+    z-index: 10; /* Aby treść była widoczna nad tłem */
+    color: #ffffff; /* Kolor tekstu */
+	text-align: center; /* Wyśrodkowanie zawartości */
+    z-index: 10; /* Nad tłem */
+}
+
+
 @keyframes fadeInSlide {
     from {
-        opacity: 0; /* Start: niewidoczny */
-        transform: translateX(-100px); /* Startowe przesunięcie w lewo */
+        opacity: 0;
+        transform: translateX(-100px);
     }
     to {
-        opacity: 1; /* Koniec: widoczny */
-        transform: translateX(0); /* Na miejscu */
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 
