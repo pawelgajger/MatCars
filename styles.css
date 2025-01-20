@@ -233,11 +233,23 @@ footer {
 	}
 }
 
-/* Karty projektów w sekcji realizacji */
+.gallery-section {
+	text-align: center; /* Wyśrodkowanie tekstu */
+	margin-top: 20px;
+}
+
+.gallery-section h1,
+.gallery-section h2,
+.gallery-section p {
+	margin-bottom: 20px;
+}
+
 .projects {
 	display: flex;
-	justify-content: space-around;
-	flex-wrap: wrap;
+	justify-content: center; /* Wyśrodkowanie w poziomie */
+	align-items: center; /* Wyśrodkowanie w pionie */
+	flex-wrap: wrap; /* Umożliwia zawijanie wierszy */
+	gap: 20px; /* Odstęp między kartami */
 	margin-top: 20px;
 }
 
@@ -246,25 +258,31 @@ footer {
 	color: #fff;
 	border-radius: 10px;
 	overflow: hidden;
-	width: 300px;
-	margin: 15px;
-	text-align: center;
+	width: 300px; /* Stała szerokość karty */
+	margin: 0 auto; /* Wyśrodkowanie każdej karty */
+	text-align: center; /* Wyśrodkowanie tekstu */
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	display: flex;
+	flex-direction: column; /* Umożliwia układ pionowy */
+	align-items: center; /* Wyśrodkowanie zawartości */
 }
 
 .project-card img {
-	width: 100%;
-	height: auto;
+	width: 100%; /* Obraz wypełnia szerokość karty */
+	height: auto; /* Zachowuje proporcje */
+	border-bottom: 2px solid rgba(255, 255, 255, 0.2); /* Dodanie delikatnej linii */
 }
 
 .project-card h3 {
 	margin: 15px 0;
 	font-size: 1.5rem;
+	text-align: center; /* Wyśrodkowanie tekstu */
 }
 
 .project-card p {
 	padding: 0 15px 20px;
 	font-size: 1rem;
+	text-align: center; /* Wyśrodkowanie opisu */
 }
 
 p {
