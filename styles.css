@@ -22,7 +22,7 @@ body {
 .navbar .logo-left img,
 .navbar .logo-right img {
 	height: 80px; /* Wysokość loga */
-	width: 100%;
+	width: auto;
 }
 
 .navbar ul {
@@ -552,6 +552,12 @@ div {
 
 	.logo-left {
 		flex: 0 0 auto;
+	}
+
+	.navbar .logo-left img,
+	.navbar .logo-right img {
+		height: 50px; /* Zmniejszenie wysokości loga */
+		width: auto; /* Zachowanie proporcji */
 	}
 
 	main {
