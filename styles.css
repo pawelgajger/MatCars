@@ -110,6 +110,7 @@ body {
 	text-align: center;
 	color: #000;
 	animation: fadeIn 2s ease-in-out; /* Prosta animacja fade-in */
+	margin-top: 20px;
 	margin-bottom: 20px; /* Zmniejszenie odstępu poniżej sekcji */
 }
 
@@ -224,7 +225,7 @@ footer {
 @media (max-width: 768px) {
 	.navbar ul li {
 		display: block;
-		margin: 10px 0;
+		margin: 20px 0;
 	}
 
 	.about-section {
@@ -514,6 +515,7 @@ div {
 		margin-right: 20px;
 		position: static;
 		transform: none;
+		z-index: 1100; /* Wyższy niż inne elementy */
 	}
 
 	.nav-links {
