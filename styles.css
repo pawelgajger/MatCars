@@ -758,8 +758,8 @@ h2 {
 	font-size: 50px; /* Powiększenie czcionki */
 }
 
-/* @media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
 	.main-section .content p {
-		font-size: 18px; 
+		font-size: 18px;
 	}
-} */
+}
