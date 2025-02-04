@@ -124,8 +124,8 @@ body {
 	justify-content: center;
 	min-height: 1000px; /* Wysokość kontenera */
 	width: 100%; /* Pełna szerokość */
-	background-image: url('photos/photo.png'); /* Ścieżka do obrazu */
-	background-size: cover; /* Obraz wypełnia kontener */
+	background-image: url('photos/logo_blue.png'); /* Ścieżka do obrazu */
+	background-size: cover; /*photos Obraz wypełnia kontener */
 	background-position: center; /* Wyśrodkowanie obrazu */
 	background-repeat: no-repeat; /* Zapobiegaj powtarzaniu obrazu */
 	animation: fadeInSlide 3s ease-in-out forwards; /* Efekt fade-in */
