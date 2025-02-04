@@ -28,26 +28,26 @@ window.addEventListener('scroll', function () {
 })
 
 // Funkcja sprawdzająca, czy urządzenie jest mobilne
-function isMobileDevice() {
-	return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
-}
+// function isMobileDevice() {
+// 	return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+// }
 
 // Obsługa kliknięcia przycisku "Reserve"
 const reserveButtons = document.querySelectorAll('.reserve-button') // Pobierz wszystkie przyciski rezerwacji
 
-reserveButtons.forEach(button => {
-	button.addEventListener('click', function () {
-		if (isMobileDevice()) {
-			// Na urządzeniach mobilnych otwórz dialer
-			window.location.href = 'tel:+538-682-023'
-		} else {
-			// Na desktopie pokaż numer telefonu
-			const phoneNumberElement = document.getElementById('phoneNumber')
-			if (phoneNumberElement) {
-				phoneNumberElement.style.display = 'block'
-			} else {
-				alert('Zadzwoń pod numer: +48 538-682-023')
-			}
-		}
-	})
-})
+// reserveButtons.forEach(button => {
+// 	button.addEventListener('click', function () {
+// 		if (isMobileDevice()) {
+// 			// Na urządzeniach mobilnych otwórz dialer
+// 			window.location.href = 'tel:+538-682-023'
+// 		} else {
+// 			// Na desktopie pokaż numer telefonu
+// 			const phoneNumberElement = document.getElementById('phoneNumber')
+// 			if (phoneNumberElement) {
+// 				phoneNumberElement.style.display = 'block'
+// 			} else {
+// 				alert('Zadzwoń pod numer: +48 538-682-023')
+// 			}
+// 		}
+// 	})
+// })
