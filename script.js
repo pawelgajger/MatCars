@@ -22,8 +22,23 @@ document.addEventListener('DOMContentLoaded', function () {
 })
 
 // Zapewnienie, że menu działa po przewinięciu strony
-window.addEventListener('scroll', function() {
-	const navbar = document.querySelector('.navbar');
-	navbar.style.top = '0';
-  });
-  
+window.addEventListener('scroll', function () {
+	const navbar = document.querySelector('.navbar')
+	navbar.style.top = '0'
+})
+
+// Funkcja sprawdzająca, czy urządzenie jest mobilne
+function isMobileDevice() {
+	return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+}
+
+// Obsługa kliknięcia przycisku
+document.getElementById('reserveButton').addEventListener('click', function () {
+	if (isMobileDevice()) {
+		// Na urządzeniach mobilnych otwórz dialer
+		window.location.href = 'tel:+48123456789'
+	} else {
+		// Na desktopie pokaż numer telefonu
+		document.getElementById('phoneNumber').style.display = 'block'
+	}
+})
