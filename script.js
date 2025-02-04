@@ -32,13 +32,22 @@ function isMobileDevice() {
 	return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
 }
 
-// Obsługa kliknięcia przycisku
-document.getElementById('reserveButton').addEventListener('click', function () {
-	if (isMobileDevice()) {
-		// Na urządzeniach mobilnych otwórz dialer
-		window.location.href = 'tel:+48123456789'
-	} else {
-		// Na desktopie pokaż numer telefonu
-		document.getElementById('phoneNumber').style.display = 'block'
-	}
+// Obsługa kliknięcia przycisku "Reserve"
+const reserveButtons = document.querySelectorAll('.reserve-button') // Pobierz wszystkie przyciski rezerwacji
+
+reserveButtons.forEach(button => {
+	button.addEventListener('click', function () {
+		if (isMobileDevice()) {
+			// Na urządzeniach mobilnych otwórz dialer
+			window.location.href = 'tel:+48123456789'
+		} else {
+			// Na desktopie pokaż numer telefonu
+			const phoneNumberElement = document.getElementById('phoneNumber')
+			if (phoneNumberElement) {
+				phoneNumberElement.style.display = 'block'
+			} else {
+				alert('Zadzwoń pod numer: +48 123 456 789')
+			}
+		}
+	})
 })

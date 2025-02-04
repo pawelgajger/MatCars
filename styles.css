@@ -623,6 +623,38 @@ div {
 	section {
 		margin: 30px 0;
 	}
+
+	table,
+	thead,
+	tbody,
+	th,
+	td,
+	tr {
+		display: block;
+	}
+	thead tr {
+		display: none; /* Ukryj nagłówki tabeli */
+	}
+	tr {
+		margin-bottom: 15px; /* Odstęp między wierszami */
+		border-bottom: 2px solid #ddd; /* Oddzielenie rekordów */
+		padding-bottom: 10px;
+	}
+	td {
+		text-align: right; /* Wyrównanie tekstu w komórkach */
+		padding-left: 50%; /* Przesunięcie dla etykiet */
+		position: relative; /* Pozycjonowanie dla pseudo-elementów */
+		border: none; /* Usuń obramowanie w widoku mobilnym */
+	}
+	td::before {
+		content: attr(data-label); /* Dodaj etykietę z nazwą kolumny */
+		position: absolute;
+		left: 10px; /* Pozycja etykiety */
+		width: calc(50% - 20px);
+		text-align: left; /* Wyrównanie etykiety do lewej */
+		font-weight: bold; /* Wyróżnienie etykiety */
+		color: #555; /* Kolor etykiety */
+	}
 }
 
 /* Animacje dla hamburgera */
