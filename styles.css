@@ -33,7 +33,7 @@ body {
 }
 
 .navbar ul li {
-	margin: 0 10px;
+	margin: 10px;
 }
 
 .navbar ul li a {
@@ -111,7 +111,7 @@ body {
 	color: #000;
 	animation: fadeIn 2s ease-in-out; /* Prosta animacja fade-in */
 	margin-top: 20px;
-	margin-bottom: 20px; /* Zmniejszenie odstępu poniżej sekcji */
+	margin-bottom: 20px;
 }
 
 .container {
@@ -173,12 +173,12 @@ body {
 
 /* Styl dla tekstu z półprzezroczystym tłem */
 .text-background {
-	padding: 10px;
+	padding: 20px;
 	border-radius: 5px;
 	font-size: 20px;
 	display: inline-block;
 	line-height: 2; /* Większy odstęp między liniami */
-	margin-bottom: 10px; /* Dodanie przerwy między akapitami */
+	margin-bottom: 20px; /* Dodanie przerwy między akapitami */
 	display: block; /* Każda linia będzie traktowana jako blok */
 	white-space: pre-line; /* Zachowuje łamanie linii w treści */
 }
@@ -240,7 +240,7 @@ footer {
 
 .gallery-section {
 	text-align: center; /* Wyśrodkowanie tekstu */
-	margin-top: 20px;
+	/* margin-top: 20px; */
 }
 
 .gallery-section h1,
@@ -770,4 +770,15 @@ h2 {
 	.main-section .content p {
 		font-size: 18px;
 	}
+}
+
+section {
+	margin: 0;
+	padding: 0;
+}
+
+h1,
+ul {
+	margin: 0;
+	padding: 0;
 }
