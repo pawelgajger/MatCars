@@ -178,6 +178,8 @@ body {
 	display: inline-block;
 	line-height: 2; /* Większy odstęp między liniami */
 	margin-bottom: 10px; /* Dodanie przerwy między akapitami */
+	display: block; /* Każda linia będzie traktowana jako blok */
+	white-space: pre-line; /* Zachowuje łamanie linii w treści */
 }
 
 /* Efekty hover dla przycisków */
@@ -722,4 +724,26 @@ img {
 }
 .reserve-button:hover {
 	background-color: #218838;
+}
+
+.contact-btn {
+	display: inline-block;
+	background: #007bff;
+	color: white;
+	padding: 10px 20px;
+	text-decoration: none;
+	border-radius: 5px;
+	transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+	background: #0056b3;
+	transform: scale(1.1); /* Powiększenie przycisku */
+}
+
+.about-section h1,
+.services-section h1 {
+	font-size: 2rem;
+	line-height: 1.2; /* Opcjonalnie */
+	font-weight: bold; /* Opcjonalnie */
 }

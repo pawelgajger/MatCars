@@ -39,14 +39,14 @@ reserveButtons.forEach(button => {
 	button.addEventListener('click', function () {
 		if (isMobileDevice()) {
 			// Na urządzeniach mobilnych otwórz dialer
-			window.location.href = 'tel:+48123456789'
+			window.location.href = 'tel:+538-682-023'
 		} else {
 			// Na desktopie pokaż numer telefonu
 			const phoneNumberElement = document.getElementById('phoneNumber')
 			if (phoneNumberElement) {
 				phoneNumberElement.style.display = 'block'
 			} else {
-				alert('Zadzwoń pod numer: +48 123 456 789')
+				alert('Zadzwoń pod numer: +48 538-682-023')
 			}
 		}
 	})
