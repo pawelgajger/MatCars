@@ -758,9 +758,8 @@ h2 {
 	font-size: 50px; /* Powiększenie czcionki */
 }
 
-/* Styl dla urządzeń mobilnych (ekrany o szerokości maks. 768px) */
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) {
 	.main-section .content p {
-		font-size: 18px; /* Mniejszy rozmiar tekstu dla urządzeń mobilnych */
+		font-size: 18px; 
 	}
-}
+} */
