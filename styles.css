@@ -21,7 +21,7 @@ body {
 
 .navbar .logo-left img,
 .navbar .logo-right img {
-	height: 80px; /* Wysokość loga */
+	height: 140px; /* Wysokość loga */
 	width: auto;
 }
 
@@ -144,8 +144,9 @@ body {
 
 .logo {
 	width: auto; /* Pozwala na dynamiczne dopasowanie szerokości */
-	max-width: 1000px; /* Zwiększ maksymalną szerokość logo */
+	max-width: 1200px; /* Zwiększ maksymalną szerokość logo */
 	height: auto; /* Zachowuje proporcje */
+	margin-top: -200px; /* Przesunięcie do góry */
 	margin-bottom: 30px; /* Większy odstęp między logo a tekstem */
 	animation: fadeInSlide 3s ease-in-out 1s forwards; /* Efekt fade-in */
 	opacity: 0; /* Startowo niewidoczne */
@@ -482,6 +483,215 @@ div {
 	transform: rotate(45deg) translate(-5px, -6px);
 }
 
+/* Animacje dla hamburgera */
+.hamburger.active span:nth-child(1) {
+	transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+	opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+	transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Zapobieganie przewijaniu */
+body.menu-open {
+	overflow: hidden;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+th,
+td {
+	border: 1px solid #ddd;
+	padding: 8px;
+	text-align: center;
+}
+th {
+	background-color: #f4f4f4;
+}
+img {
+	width: 100px;
+	height: auto;
+}
+.reserve-button {
+	display: inline-block;
+	padding: 8px 12px;
+	background-color: #28a745;
+	color: white;
+	text-decoration: none;
+	border-radius: 5px;
+}
+.reserve-button:hover {
+	background-color: #218838;
+}
+
+.phone-number {
+	display: none;
+	font-size: 18px;
+	color: #333;
+	margin-top: 10px;
+}
+.reserve-button {
+	display: inline-block;
+	padding: 10px 15px;
+	background-color: #28a745;
+	color: white;
+	text-decoration: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.reserve-button:hover {
+	background-color: #218838;
+}
+
+.contact-btn {
+	display: inline-block;
+	background: #007bff;
+	color: white;
+	padding: 10px 20px;
+	text-decoration: none;
+	border-radius: 5px;
+	transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+	background: #0056b3;
+	transform: scale(1.1); /* Powiększenie przycisku */
+}
+
+.about-section h1,
+.services-section h1,
+.gallery-section h1,
+.social-section h1 {
+	font-size: 2rem;
+	line-height: 1.2; /* Opcjonalnie */
+	font-weight: bold; /* Opcjonalnie */
+}
+
+h1,
+h2 {
+	margin-top: 10px;
+	margin-bottom: 10px; /* Zmniejszenie odstępu pod nagłówkami */
+}
+
+.main-section .content p {
+	font-size: 50px; /* Powiększenie czcionki */
+}
+
+section {
+	margin: 0;
+	padding: 0;
+}
+
+h1,
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+.image-container {
+	text-align: center; /* Wyśrodkowanie obrazu */
+	margin: 20px 0; /* Odstępy nad i pod obrazem */
+}
+
+.about-image {
+	max-width: 100%; /* Dopasowanie do szerokości kontenera */
+	width: 400px;
+	height: auto; /* Zachowanie proporcji obrazu */
+	border-radius: 8px; /* Opcjonalnie: zaokrąglenie rogów */
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Opcjonalnie: cień dla estetyki */
+}
+
+.services-section {
+	background-image: url('photos/services.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding: 50px 20px;
+	color: #fff;
+}
+
+.services-section h1 {
+	text-align: center;
+	font-size: 2rem;
+	margin-bottom: 20px;
+	color: #fff;
+	font-weight: bold;
+}
+
+.text {
+	list-style-type: none;
+	padding: 0;
+	margin: 0 auto;
+	max-width: 600px;
+	color: #fff;
+	font-weight: bold;
+}
+
+.text li {
+	margin-bottom: 10px;
+	font-size: 2rem;
+	color: #fff;
+	font-weight: bold;
+}
+
+/* Układ dwóch kolumn */
+.two-columns {
+	display: flex;
+	width: 100%;
+	gap: 20px; /* Odstęp między kolumnami */
+}
+
+/* Stylizacja lewej i prawej kolumny */
+.left-column,
+.right-column {
+	flex: 1; /* Obie kolumny mają równą szerokość */
+	padding: 20px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Delikatny cień */
+	border-radius: 8px; /* Zaokrąglone rogi */
+	background-color: #f9f9f9; /* Jasne tło */
+}
+
+/* Nagłówki w obu kolumnach */
+.left-column h2,
+.right-column h2 {
+	font-size: 1.5rem; /* Rozmiar nagłówka */
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+.left-column ul {
+	list-style-type: none; /* Usunięcie kropek z listy */
+	padding: 0;
+	text-align: center; /* Wyśrodkowanie tekstu w całej liście */
+}
+
+.left-column ul li {
+	font-size: 1.2rem; /* Dopasowany rozmiar czcionki */
+	line-height: 1.8; /* Odstęp między liniami */
+	font-family: 'Montserrat', sans-serif; /* Spójna czcionka */
+	color: #333; /* Kolor tekstu */
+	margin-bottom: 10px; /* Odstęp między elementami listy */
+	text-align: center; /* Wyśrodkowanie tekstu w każdym elemencie listy */
+}
+
+.left-column ul li:hover {
+	transform: scale(1.1); /* Powiększenie o 5% */
+	transition: transform 0.3s ease-in-out; /* Płynne przejście */
+}
+
+.right-column .repair-image {
+	width: 100%; /* Obraz zajmuje całą szerokość kolumny */
+	height: 100%; /* Obraz zajmuje całą wysokość kolumny */
+	object-fit: cover; /* Dopasowanie obrazu bez zniekształceń */
+	border-radius: 8px; /* Zaokrąglone rogi obrazu */
+}
+
 @media screen and (max-width: 768px) {
 	body {
 		font-size: 14px;
@@ -666,164 +876,23 @@ div {
 		font-weight: bold; /* Wyróżnienie etykiety */
 		color: #555; /* Kolor etykiety */
 	}
-}
 
-/* Animacje dla hamburgera */
-.hamburger.active span:nth-child(1) {
-	transform: rotate(-45deg) translate(-5px, 6px);
-}
+	.two-columns {
+		flex-direction: column; /* Kolumny jedna pod drugą */
+		gap: 10px; /* Mniejszy odstęp między kolumnami */
+	}
 
-.hamburger.active span:nth-child(2) {
-	opacity: 0;
-}
+	.left-column,
+	.right-column {
+		flex: none;
+		width: 100%; /* Kolumny zajmują pełną szerokość ekranu */
+	}
 
-.hamburger.active span:nth-child(3) {
-	transform: rotate(45deg) translate(-5px, -6px);
-}
+	.right-column .repair-image {
+		height: auto; /* Dopasowanie wysokości obrazu na mniejszych ekranach */
+	}
 
-/* Zapobieganie przewijaniu */
-body.menu-open {
-	overflow: hidden;
-}
-
-table {
-	width: 100%;
-	border-collapse: collapse;
-}
-th,
-td {
-	border: 1px solid #ddd;
-	padding: 8px;
-	text-align: center;
-}
-th {
-	background-color: #f4f4f4;
-}
-img {
-	width: 100px;
-	height: auto;
-}
-.reserve-button {
-	display: inline-block;
-	padding: 8px 12px;
-	background-color: #28a745;
-	color: white;
-	text-decoration: none;
-	border-radius: 5px;
-}
-.reserve-button:hover {
-	background-color: #218838;
-}
-
-.phone-number {
-	display: none;
-	font-size: 18px;
-	color: #333;
-	margin-top: 10px;
-}
-.reserve-button {
-	display: inline-block;
-	padding: 10px 15px;
-	background-color: #28a745;
-	color: white;
-	text-decoration: none;
-	border-radius: 5px;
-	cursor: pointer;
-}
-.reserve-button:hover {
-	background-color: #218838;
-}
-
-.contact-btn {
-	display: inline-block;
-	background: #007bff;
-	color: white;
-	padding: 10px 20px;
-	text-decoration: none;
-	border-radius: 5px;
-	transition: all 0.3s ease;
-}
-
-.contact-btn:hover {
-	background: #0056b3;
-	transform: scale(1.1); /* Powiększenie przycisku */
-}
-
-.about-section h1,
-.services-section h1 {
-	font-size: 2rem;
-	line-height: 1.2; /* Opcjonalnie */
-	font-weight: bold; /* Opcjonalnie */
-}
-
-h1,
-h2 {
-	margin-top: 10px;
-	margin-bottom: 10px; /* Zmniejszenie odstępu pod nagłówkami */
-}
-
-.main-section .content p {
-	font-size: 50px; /* Powiększenie czcionki */
-}
-
-@media only screen and (max-width: 768px) {
 	.main-section .content p {
 		font-size: 18px;
 	}
-}
-
-section {
-	margin: 0;
-	padding: 0;
-}
-
-h1,
-ul {
-	margin: 0;
-	padding: 0;
-}
-
-.image-container {
-	text-align: center; /* Wyśrodkowanie obrazu */
-	margin: 20px 0; /* Odstępy nad i pod obrazem */
-}
-
-.about-image {
-	max-width: 100%; /* Dopasowanie do szerokości kontenera */
-	height: auto; /* Zachowanie proporcji obrazu */
-	border-radius: 8px; /* Opcjonalnie: zaokrąglenie rogów */
-	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Opcjonalnie: cień dla estetyki */
-}
-
-.services-section {
-	background-image: url('photos/services.png');
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	padding: 50px 20px;
-	color: #fff;
-}
-
-.services-section h1 {
-	text-align: center;
-	font-size: 2rem;
-	margin-bottom: 20px;
-	color: #fff;
-	font-weight: bold;
-}
-
-.text {
-	list-style-type: none;
-	padding: 0;
-	margin: 0 auto;
-	max-width: 600px;
-	color: #fff;
-	font-weight: bold;
-}
-
-.text li {
-	margin-bottom: 10px;
-	font-size: 2rem;
-	color: #fff;
-	font-weight: bold;
 }
