@@ -501,6 +501,52 @@ body.menu-open {
 	overflow: hidden;
 }
 
+.table-section {
+	padding: 40px;
+	background-color: #f9f9f9; /* Jasne tło */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Delikatny cień */
+	border-radius: 8px; /* Zaokrąglone rogi */
+	margin-bottom: 40px;
+}
+
+.table-section h1 {
+	font-size: 2rem;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.table-wrapper {
+	overflow-x: auto; /* Dodanie przewijania poziomego na małych ekranach */
+}
+
+.table-section table {
+	width: 100%;
+	border-collapse: collapse; /* Usunięcie odstępów między komórkami */
+	margin-top: 20px;
+}
+
+.table-section th,
+.table-section td {
+	padding: 12px 15px;
+	text-align: left;
+	border-bottom: 1px solid #ddd; /* Linia oddzielająca wiersze */
+}
+
+.table-section th {
+	background-color: #333; /* Tło nagłówka tabeli */
+	color: #fff; /* Kolor tekstu nagłówka */
+	font-weight: bold;
+}
+
+.table-section tr:hover {
+	background-color: #f1f1f1; /* Efekt podświetlenia wiersza */
+}
+
+.table-section td {
+	font-size: 1rem;
+}
+
 table {
 	width: 100%;
 	border-collapse: collapse;
@@ -894,5 +940,57 @@ ul {
 
 	.main-section .content p {
 		font-size: 18px;
+	}
+	table {
+		display: block;
+		overflow-x: auto;
+		white-space: nowrap;
+	}
+
+	th,
+	td {
+		font-size: 0.9rem;
+		padding: 8px;
+	}
+
+	.two-columns {
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.left-column,
+	.right-column {
+		width: 100%;
+	}
+
+	.repair-image {
+		width: 100%;
+		height: auto;
+	}
+
+	h1,
+	h2,
+	h3 {
+		font-size: 1.5rem;
+	}
+
+	p,
+	li {
+		font-size: 1rem;
+	}
+
+	.reserve-button {
+		font-size: 0.9rem;
+		padding: 8px 12px;
+	}
+
+	.scroll-animate {
+		transform: none;
+		opacity: 1;
+	}
+
+	.container {
+		margin: 0;
+		padding: 10px;
 	}
 }
