@@ -582,18 +582,6 @@ img {
 	color: #333;
 	margin-top: 10px;
 }
-.reserve-button {
-	display: inline-block;
-	padding: 10px 15px;
-	background-color: #28a745;
-	color: white;
-	text-decoration: none;
-	border-radius: 5px;
-	cursor: pointer;
-}
-.reserve-button:hover {
-	background-color: #218838;
-}
 
 .contact-btn {
 	display: inline-block;
@@ -697,10 +685,12 @@ ul {
 .left-column,
 .right-column {
 	flex: 1; /* Obie kolumny mają równą szerokość */
-	padding: 20px;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Delikatny cień */
-	border-radius: 8px; /* Zaokrąglone rogi */
-	background-color: #f9f9f9; /* Jasne tło */
+	background-color: transparent; /* Usuń tło */
+	box-shadow: none; /* Usuń cień */
+	border: none; /* Usuń obramowanie */
+	border-radius: 0; /* Usuń zaokrąglenia rogów */
+	margin: 0;
+	padding: 0;
 }
 
 /* Nagłówki w obu kolumnach */
@@ -812,7 +802,7 @@ ul {
 
 	.navbar .logo-left img,
 	.navbar .logo-right img {
-		height: 50px; /* Zmniejszenie wysokości loga */
+		height: 100px; /* Zmniejszenie wysokości loga */
 		width: auto; /* Zachowanie proporcji */
 	}
 
@@ -823,8 +813,8 @@ ul {
 
 	/* Sekcja główna */
 	.main-section {
-		min-height: 400px;
-		margin-top: 60px;
+		min-height: 450px;
+		margin-top: 30px;
 		padding: 20px;
 		background-position: center;
 	}
@@ -837,7 +827,7 @@ ul {
 
 	.logo {
 		width: 100%;
-		max-width: 280px;
+		max-width: 450px;
 		height: auto;
 		margin: 20px auto;
 	}
@@ -891,49 +881,6 @@ ul {
 		margin: 20px 0;
 	}
 
-	table,
-	thead,
-	tbody,
-	th,
-	td,
-	tr {
-		display: block;
-	}
-	thead tr {
-		display: none; /* Ukryj nagłówki tabeli */
-	}
-	tr {
-		margin-bottom: 15px; /* Odstęp między wierszami */
-		border-bottom: 2px solid #ddd; /* Oddzielenie rekordów */
-		padding-bottom: 10px;
-	}
-	td {
-		text-align: right; /* Wyrównanie tekstu w komórkach */
-		padding-left: 50%; /* Przesunięcie dla etykiet */
-		position: relative; /* Pozycjonowanie dla pseudo-elementów */
-		border: none; /* Usuń obramowanie w widoku mobilnym */
-	}
-	td::before {
-		content: attr(data-label); /* Dodaj etykietę z nazwą kolumny */
-		position: absolute;
-		left: 10px; /* Pozycja etykiety */
-		width: calc(50% - 20px);
-		text-align: left; /* Wyrównanie etykiety do lewej */
-		font-weight: bold; /* Wyróżnienie etykiety */
-		color: #555; /* Kolor etykiety */
-	}
-
-	.two-columns {
-		flex-direction: column; /* Kolumny jedna pod drugą */
-		gap: 10px; /* Mniejszy odstęp między kolumnami */
-	}
-
-	.left-column,
-	.right-column {
-		flex: none;
-		width: 100%; /* Kolumny zajmują pełną szerokość ekranu */
-	}
-
 	.right-column .repair-image {
 		height: auto; /* Dopasowanie wysokości obrazu na mniejszych ekranach */
 	}
@@ -942,20 +889,45 @@ ul {
 		font-size: 18px;
 	}
 	table {
-		display: block;
-		overflow-x: auto;
-		white-space: nowrap;
+		display: block; /* Zmieniamy tabelę na blokowy układ */
+		width: 100%; /* Dopasowanie do szerokości ekranu */
+		overflow-x: auto; /* Dodajemy przewijanie poziome, jeśli potrzebne */
 	}
 
-	th,
-	td {
-		font-size: 0.9rem;
+	thead {
+		display: none; /* Ukrywamy nagłówki tabeli */
+	}
+
+	tbody tr {
+		display: block; /* Każdy wiersz jako blok */
+		margin-bottom: 10px; /* Odstęp między wierszami */
+		border: 1px solid #ddd; /* Obramowanie dla lepszej czytelności */
+		border-radius: 8px;
+		padding: 10px;
+	}
+
+	tbody td {
+		display: flex;
+		justify-content: space-between; /* Wyśrodkowanie tekstu i wartości */
+		align-items: center;
+		font-size: 0.9rem; /* Zmniejszenie rozmiaru tekstu */
 		padding: 8px;
+	}
+
+	tbody td::before {
+		content: attr(data-label); /* Dodanie etykiety z nagłówka */
+		font-weight: bold;
+		flex-basis: 40%; /* Szerokość etykiety */
+		text-align: left;
+	}
+
+	tbody td:last-child {
+		text-align: right; /* Wyrównanie ostatniej kolumny do prawej */
 	}
 
 	.two-columns {
 		flex-direction: column;
-		gap: 10px;
+		gap: 20px;
 	}
 
 	.left-column,
@@ -980,17 +952,7 @@ ul {
 	}
 
 	.reserve-button {
-		font-size: 0.9rem;
-		padding: 8px 12px;
-	}
-
-	.scroll-animate {
-		transform: none;
-		opacity: 1;
-	}
-
-	.container {
-		margin: 0;
-		padding: 10px;
+		font-size: 0.8rem;
+		padding: 6px 10px;
 	}
 }
