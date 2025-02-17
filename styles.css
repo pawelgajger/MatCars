@@ -147,7 +147,7 @@ body {
 	max-width: 1200px; /* Zwiększ maksymalną szerokość logo */
 	height: auto; /* Zachowuje proporcje */
 	margin-top: -200px; /* Przesunięcie do góry */
-	margin-bottom: 30px; /* Większy odstęp między logo a tekstem */
+	margin-bottom: -200px; /* Większy odstęp między logo a tekstem */
 	animation: fadeInSlide 3s ease-in-out 1s forwards; /* Efekt fade-in */
 	opacity: 0; /* Startowo niewidoczne */
 }
@@ -298,7 +298,7 @@ p {
 
 /* Efekty hover dla kart projektów */
 .project-card:hover {
-	transform: scale(1.05);
+	transform: scale(1.15);
 	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
@@ -701,13 +701,13 @@ ul {
 	text-align: center;
 }
 
-.left-column ul {
+.right-column ul {
 	list-style-type: none; /* Usunięcie kropek z listy */
 	padding: 0;
 	text-align: center; /* Wyśrodkowanie tekstu w całej liście */
 }
 
-.left-column ul li {
+.right-column ul li {
 	font-size: 1.2rem; /* Dopasowany rozmiar czcionki */
 	line-height: 1.8; /* Odstęp między liniami */
 	font-family: 'Montserrat', sans-serif; /* Spójna czcionka */
@@ -716,12 +716,12 @@ ul {
 	text-align: center; /* Wyśrodkowanie tekstu w każdym elemencie listy */
 }
 
-.left-column ul li:hover {
+.right-column ul li:hover {
 	transform: scale(1.1); /* Powiększenie o 5% */
 	transition: transform 0.3s ease-in-out; /* Płynne przejście */
 }
 
-.right-column .repair-image {
+.left-column .repair-image {
 	width: 100%; /* Obraz zajmuje całą szerokość kolumny */
 	height: 100%; /* Obraz zajmuje całą wysokość kolumny */
 	object-fit: cover; /* Dopasowanie obrazu bez zniekształceń */
